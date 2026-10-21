@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import { Suspense } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -41,16 +39,13 @@ function ItemDetailsContent() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-     
       <div>
         <Link href="/items" className="btn btn-ghost btn-sm gap-2">
           <FiArrowLeft className="w-4 h-4" /> Back to Items
         </Link>
       </div>
 
-    
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-      
         <div className="lg:col-span-6 rounded-3xl overflow-hidden border border-base-200 bg-base-200 shadow-lg">
           <img
             src={item.image}
@@ -59,7 +54,6 @@ function ItemDetailsContent() {
           />
         </div>
 
-     
         <div className="lg:col-span-6 space-y-6">
           <div className="flex flex-wrap items-center gap-2">
             <span className="badge badge-primary badge-lg gap-1.5 font-medium">
@@ -84,12 +78,10 @@ function ItemDetailsContent() {
             )}
           </div>
 
-    
           <div className="space-y-2">
             <h2 className="text-lg font-bold">Overview</h2>
             <p className="text-base-content/80 leading-relaxed">{item.fullDescription}</p>
           </div>
-
 
           <div className="bg-base-200/60 rounded-2xl p-5 border border-base-200 space-y-3">
             <h3 className="font-bold flex items-center gap-2">
@@ -107,7 +99,6 @@ function ItemDetailsContent() {
         </div>
       </div>
 
-  
       {relatedItems.length > 0 && (
         <section className="pt-8 border-t border-base-200">
           <h2 className="text-2xl font-bold mb-6">Related in {item.category}</h2>
